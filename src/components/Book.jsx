@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Book = ({ image, title, author, category, price }) => {
+const library = ({ image, title, author, category, subtitle }) => {
   return (
     <div className="card bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
@@ -10,13 +10,13 @@ const Book = ({ image, title, author, category, price }) => {
       <div className="card-body items-center text-center">
         <h2 className="card-title text-white">
           {title}{" "}
-          <div className="badge badge-secondary text-xs">{category}</div>
+          <div className="badge badge-secondary text-xs"data-theme = "dim">{category}</div>
         </h2>
         <p>{author}</p>
-        <p className="text-lg font-medium">{price}</p>
+        <p className="text-lg font-medium">{subtitle}</p>
         <div className="card-actions">
-          <Link to="/book-details" className="btn btn-primary">
-            Buy Now
+          <Link to="/book-details" className="btn btn-primary" data-theme= "nord">
+            Learn More
           </Link>
         </div>
       </div>
@@ -24,4 +24,4 @@ const Book = ({ image, title, author, category, price }) => {
   );
 };
 
-export default Book;
+export default library;

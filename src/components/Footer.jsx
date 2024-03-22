@@ -5,18 +5,10 @@ const Footer = () => {
   return (
     <footer className="footer footer-center p-10  bg-primary text-primary-content rounded">
       <div className="grid grid-flow-col gap-4">
-        <Link to="/about" className="link link-hover">
-          About us
-        </Link>
-        <Link to="/contact" className="link link-hover">
-          Contact
-        </Link>
-        <Link to="/jobs" className="link link-hover">
-          Jobs
-        </Link>
-        <Link to="/press-kit" className="link link-hover">
-          Press kit
-        </Link>
+        <Link to="/about" className="link link-hover"> About us </Link>
+        <Link to="/contact" className="link link-hover"> Contact </Link>
+        <Link to="/jobs" className="link link-hover"> Jobs </Link>
+        <Link to="/press-kit" className="link link-hover"> Press kit </Link>
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">
@@ -55,11 +47,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div>
-        <p>Copyright © 2022 - All right reserved by Book Industries Ltd</p>
-      </div>
     </footer>
   );
 }
-
 export default Footer;

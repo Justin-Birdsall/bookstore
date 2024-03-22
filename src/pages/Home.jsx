@@ -1,99 +1,94 @@
-import React from "react";
+import React, {useState} from "react";
 import Layout from "../components/Layout";
-import hero_img from "../assets/banner.png";
 import book1 from "../assets/book-1.webp";
-import book2 from "../assets/book-2.webp";
-import book3 from "../assets/book-3.webp";
-import book4 from "../assets/book-4.webp";
-import book5 from "../assets/book-5.webp";
-import book6 from "../assets/book-6.webp";
-import Book from "../components/Book";
-
+import mexico from "../assets/mexico.jpeg";
+import robot from "../assets/robot.jpeg";
+import film from "../assets/filmphoto.jpeg";
+import cat from "../assets/cat.jpeg";
+import Graphics from "../components/Book";
+import rats from '../assets/rats.webp';
+import dog from '../assets/dog.jpg'; // Import the PNG imagimport dog from '../assets/dog.jpg'; // Import the PNG image
+import tires from "../assets/tirework.jpeg"
+import kayack from "../assets/kayack.jpeg";
+import scenic from "../assets/kayackseceneryfishing.jpeg";
+import salmon from "../assets/salmon.jpeg";
+import football from "../assets/football.jpeg"
+import family from "../assets/family.jpeg"
+import boston from "../assets/boston.jpeg"
+import babyphoto from "../assets/watering_grass.jpeg"
 export default function Home() {
-  const BOOKS = [
+  const library = [
     {
       id: 1,
       image: book1,
       title: "The Shadow Sister",
       category: "Health",
-      author: "Lucinda Riley",
       price: "$40",
     },
-    {
-      id: 2,
-      image: book2,
-      title: "Jade War",
-      category: "Romance",
-      author: "Fonda Lee",
-      price: "$70.99",
-    },
-    {
-      id: 3,
-      image: book3,
-      title: "Call Me By Your Name",
-      category: "Biography",
-      author: "Andre Aciman",
-      price: "$58",
-    },
-    {
-      id: 4,
-      image: book4,
-      title: "The Dinner Quest",
-      category: "Food & Drink",
-      author: "B.P. Walter",
-      price: "$198",
-    },
-    {
-      id: 5,
-      image: book5,
-      title: "Marauder",
-      category: "Arts & Photography",
-      author: "Clive Cussler and Boyd Morrison",
-      price: "$34.55",
-    },
-    {
-      id: 6,
-      image: book6,
-      title: "The Silmarillion",
-      category: "Technology",
-      author: "L.R.R Tolkien",
-      price: "$44.84",
+    { id: 6,
+      image: rats,
+      title: "Serpinski Gasket",
+      category: "WebGL",
+      price: "place holder \"price\" ",
     },
   ];
+  const [selectedTab, setSelectedTab] = useState(null);
+
+  const handleCategoryChange = (category) => {
+    setSelectedTab(category);
+  };
+
   return (
     <Layout>
+
       <div className="hero py-32 bg-gray-700">
-        <div className="hero-content grid md:grid-cols-2 gap-8">
-          <div className="order-2">
-            <img src={hero_img} className="" alt="Hero" />
-          </div>
+        <div className="hero-content grid md:grid-cols-2 gap-36">
           <div>
             <h1 className="text-5xl font-bold leading-normal text-white">
-              Welcome to Cynthia Online Book Store
+              Welcome to my webpage!
             </h1>
-            <p className="py-6 text-gray-300">
-              With us, you can shop online & help save your street at the same
-              time. If you’re looking for great value second hand books, then
-              World of Books is the place for you. As you may already know, we
-              aren’t like other online book stores.
+            <p className="text-lg font-medium py-6 text-gray-300">
+              My name is Justin Birdsall and I am a currently a Senior at Grand Valley State University.
             </p>
-            <button className="btn btn-primary mt-4">Explore Books</button>
-          </div>
+            <button className="btn btn-primary mt-4">Explore Some of my works</button>
         </div>
-      </div>
-
+          <div className="carousel carousel-center max-w-md p-3 space-x-3 bg-neutral rounded-box">
+          <div className="carousel-item"> <img src={mexico} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={film} className="rounded-box" style={{ width: '350px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={family} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={football} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={boston} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={babyphoto} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={dog} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={robot} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={kayack} className="rounded-box" style={{ width: '325px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={salmon} className="rounded-box" style={{ width: '450px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={scenic} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={tires} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+          <div className="carousel-item"> <img src={cat} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
+        </div>
+        </div>
+        </div>
+        <div role="tablist" className="tabs tabs-lifted">
+        <input type="radio" name="my_tabs_1" role="tab" id = "webgl-tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-secondary" aria-label="WebGL" onChange={() => handleCategoryChange("WebGL")}
+          checked={selectedTab === "WebGL"} />
+        <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="Three.JS" />
+        <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="Blender" />
+        <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="WebGPU" />
+</div>
       <div className="py-20 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {BOOKS.map((book) => (
-            <Book
-              key={book.id}
-              image={book.image}
-              title={book.title}
-              author={book.author}
-              category={book.category}
-              price={book.price}
-            />
-          ))}
+          {library
+            .filter((example) => !selectedTab || example.category === selectedTab)
+            .map((example) => (
+            <Graphics
+              key={example.id}
+              image={example.image}
+              title={example.title}
+              category={example.category}
+              price={example.subtile}
+              />
+              ))}
         </div>
       </div>
     </Layout>
