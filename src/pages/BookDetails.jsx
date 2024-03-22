@@ -53,7 +53,7 @@ return (<Layout>
   </div>
   <div className="divider divider-horizontal divider-accent h-[350px] mx-auto-max my-16"></div>
  {/*divder for the title card and carousel pictures*/}
-    <div className="flex flex-col space-y-5 lg:pl-4">
+    <div className="flex flex-col space-y-5">
       <div className="card w-96 bg-base-100 shadow-xl">
         <button className="btn text-lg">Serpinskis Gasket</button>
         <div className="card-body">
@@ -61,8 +61,11 @@ return (<Layout>
           <p>One of the basics of Graphics is drawing a triangle, once you can draw a triangle you can draw anything or create 3D objects. Serpinskis 
           Triangle asks what if you took a triangle find the midpoints and take out the middle making one triangle 3 triangles. Think of the Tri Force from the Zelda Games.
           </p>
-          <div className="grid flex-grow place-items-center"><img src={triforce}  alt="Shoes" class="grid size-32 grid-cols-1 place-content-center" /> </div> 
-          <div className="card-actions justify-end"> </div>
+          <div className="grid flex-grow place-items-center space-y-5"><img src={triforce}  alt="Shoes" class="grid size-32 grid-cols-1 place-content-center" /> </div>
+          <div className="card-actions justify-end flex-grow space-y-5"> 
+          <p className="mb-4">Serpinkis recursive function asks what if we kept taking out a triangle from one the 3 that we have now. You can view, play with the examples,
+             or download and modify the code to learn more.</p>
+          </div>
       </div>
       </div>
   </div>
