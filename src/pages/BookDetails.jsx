@@ -43,7 +43,7 @@ return (<Layout>
 </div>
   </div>
   {/*dont forget to add / delete items to match carousel*/}
-    <div className="flex justify-center w-full mt-3 py-2 gap-2">
+    <div className="flex justify-center w-full mt-1 py-1 gap-1">
         <a href="#slide1" className="btn btn-xs"> 1 </a>
         <a href="#slide2" className="btn btn-xs"> 2 </a>
         <a href="#slide2" className="btn btn-xs"> 3 </a>
@@ -58,14 +58,13 @@ return (<Layout>
         <button className="btn text-lg">Serpinskis Gasket</button>
         <div className="card-body">
           <h2><div className="badge badge-secondary badge-lg">WebGL</div><div className="badge badge-outline badge-accent badge-lg">Homework</div></h2>
-          <p>One of the basics of Graphics is drawing a triangle, once you can draw a triangle you can draw anything or create 3D objects. Serpinskis 
+          <p>One of the basics of Graphics is drawing ra triangle, once you can draw a triangle you can draw anything or create 3D objects. Serpinskis 
           Triangle asks what if you took a triangle find the midpoints and take out the middle making one triangle 3 triangles. Think of the Tri Force from the Zelda Games.
           </p>
           <div className="grid flex-grow place-items-center space-y-5"><img src={triforce}  alt="Shoes" class="grid size-32 grid-cols-1 place-content-center" /> </div>
-          <div className="card-actions justify-end flex-grow space-y-5"> 
-          <p className="mb-4">Serpinkis recursive function asks what if we kept taking out a triangle from one the 3 that we have now. You can view, play with the examples,
-             or download and modify the code to learn more.</p>
-          </div>
+          <p className="mb-4">Serpinkis recursive function asks what if we kept taking out a triangle from one the 3 that we have now. You can view, play with the examples,or download and modify the code to learn more.</p>
+          <Link to="/homework1" className="btn btn-primary" data-theme= "nord">Learn More </Link>
+          <div className="card-actions justify-end flex-grow space-y-5"> </div>
       </div>
       </div>
   </div>
