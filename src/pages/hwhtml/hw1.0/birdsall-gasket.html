@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 <title>Birdsall Gasket</title>
@@ -26,7 +29,16 @@ main()
 <script src="../../hw_js/hw1/gasket1.js"></script>
 
 </head>
+<div id="mydiv"></div>
+    <script type="text/babel">
+      function Hello() {
+        return <h1>Hello World!</h1>;
+      }
 
+      const container = document.getElementById('mydiv');
+      const root = ReactDOM.createRoot(container);
+      root.render(<Hello />)
+    </script>
 <body>
     <canvas id="gl-canvas" width="512" height="512">
         Oops ... your browser doesn't support the HTML5 canvas element

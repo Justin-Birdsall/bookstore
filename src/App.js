@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import HW1 from "./pages/hw1";
 import gasket from "./pages/gasket"
 import GasketPoints from "./pages/gasket";
+import Bg from "./pages/Sketch"
 function App() {
   return (
     <Routes>
@@ -11,7 +12,7 @@ function App() {
       <Route path="/book-details" element={<BookDetails />} />
       <Route path="/homework1" element={<HW1 />}/>
       <Route path="/gasket"element={<GasketPoints/>} />
-
+      <Route path="/Bg" element={<Bg/>}/>
     </Routes>
   );
 }

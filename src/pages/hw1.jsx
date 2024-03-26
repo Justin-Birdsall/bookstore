@@ -1,15 +1,18 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Tetrahedron } from '@react-three/drei'
 import * as THREE from 'three'
+import Layout from '../components/Layout'
+import { Sketch} from 'react-p5'
+import Bg from "./Sketch"
+import { Link } from "react-router-dom";
 
 const straightenMatrix = new THREE.Matrix4().makeRotationAxis(new THREE.Vector3(1, 0, -1).normalize(), Math.atan(Math.sqrt(2)))
 const straighten = new THREE.Euler().setFromRotationMatrix(straightenMatrix)
-
 function SierpinskiTetrahedron({ i = 0, ...props }) {
   if (i === 0) {
     return (
       <Tetrahedron {...props}>
-        <meshStandardMaterial color="orange" />
+        <meshStandardMaterial color="blue" />
       </Tetrahedron>
     )
   } else {
@@ -28,11 +31,20 @@ function SierpinskiTetrahedron({ i = 0, ...props }) {
 
 export default function App() {
   return (
-    <Canvas orthographic camera={{ zoom: 200, position: [5, 5, 5] }}>
+    <Layout>
+ <div className="flex justify-center items-center h-screen">
+    <div>
+      <Bg/>
+    </div>
+
+    <Canvas orthographic camera={{ zoom: 300, position: [5, 5, 5] }}>
       <OrbitControls autoRotate />
       <SierpinskiTetrahedron i={5} rotation={straighten} />
       <ambientLight intensity={0.5} />
-      <directionalLight position={[1, 2, 3]} />
     </Canvas>
-  )
-}
+    
+    </div>
+
+    </Layout>
+    
+  )}

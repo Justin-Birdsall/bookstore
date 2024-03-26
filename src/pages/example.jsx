@@ -1,49 +1,49 @@
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Tetrahedron } from '@react-three/drei'
+import * as THREE from 'three'
+import Layout from '../components/Layout'
 import React from "react";
-import Layout from "../components/Layout";
-import { useLocation } from "react-router-dom";
-import { useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
 
-function Box (props) {
-  // This reference gives us direct access to the THREE.Mesh object.
-  const ref = useRef()
+import { Link } from "react-router-dom";
 
-  // Hold state for hovered and clicked events.
-  const [hovered, hover] = useState(false)
-  const [clicked, click] = useState(false)
+const straightenMatrix = new THREE.Matrix4().makeRotationAxis(new THREE.Vector3(1, 0, -1).normalize(), Math.atan(Math.sqrt(2)))
+const straighten = new THREE.Euler().setFromRotationMatrix(straightenMatrix)
 
-  // Subscribe this component to the render-loop and rotate the mesh every frame.
-  useFrame((state,delta) => (ref.current.rotation.x += delta))
-
-  // Return the view.
-  // These are regular three.js elements expressed in JSX.
-  return (
-    <mesh      
-      {...props}
-      ref={ref}
-      scale={clicked ? 1.5 : 1}
-      onClick={(event) => click(!clicked)}
-      onPointerOver={(event) => hover(true)}
-      onPointerOut={(event) => hover(false)}
-    > 
-      <boxGeometry args={[1, 1, 1]} />      
-      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange' } />    
-    </mesh>
-  )
+function SierpinskiTetrahedron({ i = 0, ...props }) {
+  if (i === 0) {
+    return (
+      <Tetrahedron {...props}>
+        <meshStandardMaterial color="red" />
+      </Tetrahedron>
+    )
+  } else {
+    const a = 1 / 2 // scaling factor
+    const b = Math.sqrt(1 / 3) / 2 // Tetrahedron has radius 1, so solve for point that's distance 0.5 from center
+    return (
+      <group {...props}>
+        <SierpinskiTetrahedron i={i - 1} scale={a} position={[b, b, b]} />
+        <SierpinskiTetrahedron i={i - 1} scale={a} position={[-b, -b, b]} />
+        <SierpinskiTetrahedron i={i - 1} scale={a} position={[b, -b, -b]} />
+        <SierpinskiTetrahedron i={i - 1} scale={a} position={[-b, b, -b]} />
+      </group>
+    )
+  }
 }
-const HW1 = () => {
+
+export default function App() {
   return (
     <Layout>
-      <Canvas>
-      <color attach="background" args={['#fff']} />
-      <ambientLight intensity={0.5} />      
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />      
-      <pointLight position={[-10, -10, -10]} />      
-      <Box position={[-1.2, 0, 0]} />     
-      <Box position={[1.2, 0, 0]} />    
-    </Canvas>
-    </Layout>
-  );
-};
+ <div className="flex justify-center items-center h-screen">
 
-export default HW1;
+    <Canvas orthographic camera={{ zoom: 300, position: [5, 5, 5] }}>
+      <OrbitControls autoRotate />
+      <SierpinskiTetrahedron i={5} rotation={straighten} />
+      <ambientLight intensity={0.5} />
+    </Canvas>
+    </div>
+    <div className='button rounded-lg'>
+hello
+    </div>
+    </Layout>
+  )
+}
