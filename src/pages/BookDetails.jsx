@@ -18,11 +18,8 @@ return (<>
         </ul>
       </div>
 </Navbar>
-<main >
-
-
-<div className="hero py-8 bg-base-100"> 
-
+<main className ="content-container bg-neutral">
+<div className="hero py-8 bg-neutral"> 
   <div className="max-w-7xl mx-auto px-4">
   <div className="flex flex-col w-full lg:flex-row">
   <div className="grid flex-shrink-0 place-items-center">
@@ -73,7 +70,7 @@ return (<>
     <div className="flex flex-col space-y-5">
       <div className="card w-96 base-content shadow-xl">
         <div className="card-title justify-center bg-base-300"><h1>Sierpinski Gasket</h1></div>
-        <div className="card-body">
+        <div className="card-body bg-base-100">
           <h2><div className="badge bg-secondary badge-ghost badge-sm">WebGL</div><div className="badge badge-outline badge-accent badge-sm">Homework</div></h2>
           <p>One of the basics of Graphics is drawing ra triangle, once you can draw a triangle you can draw anything or create 3D objects. Serpinskis 
           Triangle asks what if you took a triangle find the midpoints and take out the middle making one triangle 3 triangles. Think of the Tri Force from the Zelda Games.
