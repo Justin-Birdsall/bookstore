@@ -21,6 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
     "serve":"webpack serve --mode development",
     "build": "react-scripts build",
     "test": "react-scripts test",
