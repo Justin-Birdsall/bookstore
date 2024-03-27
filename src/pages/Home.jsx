@@ -67,9 +67,9 @@ export default function Home() {
         </div>
         </div>
         <div role="tablist" className="tabs tabs-lifted">
-        <input type="radio" name="my_tabs_1" role="tab" id = "webgl-tab" className="tab [--tab-bg:neutral] [--tab-border-color:accent] text-secondary" aria-label="WebGL" onChange={() => handleCategoryChange("WebGL")}
+        <input type="radio" name="my_tabs_1" role="tab" id = "webgl-tab" className="tab [--tab-bg:accent] [--tab-border-color:accent] text-secondary" aria-label="WebGL" onChange={() => handleCategoryChange("WebGL")}
           checked={selectedTab === "WebGL"} />
-        <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="Three.JS" />
+        <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:secondary] [--tab-border-color:secondary] text-primary" aria-label="Three.JS" />
         <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="Blender" />
         <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="WebGPU" />
 </div>

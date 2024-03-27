@@ -5,7 +5,7 @@ import HW1 from "./pages/hw1";
 import gasket from "./pages/gasket"
 import GasketPoints from "./pages/gasket";
 import Bg from "./pages/Sketch"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+
 function App() {
   return (
     <Routes>
