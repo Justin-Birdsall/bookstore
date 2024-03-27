@@ -3,10 +3,10 @@ import React from 'react';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
-const Layout = ({children}) => {
+const Layout = ({children, breadcrumbs}) => {
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <main>{children}</main>
       <Footer />
     </>

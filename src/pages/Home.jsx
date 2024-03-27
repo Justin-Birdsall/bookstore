@@ -16,6 +16,9 @@ import football from "../assets/football.jpeg"
 import family from "../assets/family.jpeg"
 import boston from "../assets/boston.jpeg"
 import babyphoto from "../assets/watering_grass.jpeg"
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 export default function Home() {
   const library = [
     {
@@ -39,9 +42,12 @@ export default function Home() {
   };
 
   return (
-    <Layout>
-
-      <div className="hero py-32 bg-gray-700">
+    <>
+    <Navbar>
+          <a className="btn btn-ghost text-xl">Justin Birdsall's Webpage!</a>
+    </Navbar>
+    <main>
+<div className="hero py-32 bg-gray-700">
         <div className="hero-content grid md:grid-cols-2 gap-36">
           <div>
             <h1 className="text-5xl font-bold leading-normal text-white">
@@ -76,12 +82,12 @@ export default function Home() {
         <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="Blender" />
         <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="WebGPU" />
 </div>
-      <div className="py-20 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="py-20 max-w-7xl mx-auto ">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {library
             .filter((example) => !selectedTab || example.category === selectedTab)
             .map((example) => (
-            <Graphics
+            <Graphics 
               key={example.id}
               image={example.image}
               title={example.title}
@@ -91,6 +97,9 @@ export default function Home() {
               ))}
         </div>
       </div>
-    </Layout>
+      </main>
+      <Footer>
+      </Footer>
+    </>
   );
 }

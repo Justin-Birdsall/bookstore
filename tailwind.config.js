@@ -6,7 +6,17 @@ module.exports = {
     extend: {},
   },
   plugins: [require("daisyui")],
-daisyui: {
-  themes: [ {
-    light: { ...require("daisyui/src/theming/themes")["dim"], primary: "76ABAE", secondary: "FC6736",}, }, "nord", ], }, }
 
+
+    daisyui: {
+      themes: [       
+        { mytheme: {
+          "primary": "#a991f7",
+          "secondary": "#f6d860",
+          "accent": "#37cdbe",
+          "neutral": "#3d4451",
+          "base-100": "#ffffff",
+        },},
+      "pastel", "dark", "retro","aqua","cyberpunk"],
+    },
+  }

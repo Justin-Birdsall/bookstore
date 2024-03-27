@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const library = ({ image, title, author, category, subtitle }) => {
   return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="card  shadow-xl">
       <figure className="px-10 pt-10">
         <img src={image} alt={title} className="rounded-xl" />
       </figure>

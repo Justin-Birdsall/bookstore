@@ -32,7 +32,10 @@ function SierpinskiTetrahedron({ i = 0, ...props }) {
 
 export default function App() {
   return (
-    <Layout>
+    <>
+      <Navbar  breadcrumbs={breadcrumbs}/>
+      <main>{children}</main>
+      <Footer />
  <div className="flex justify-center items-center h-screen">
 
     <Canvas orthographic camera={{ zoom: 300, position: [5, 5, 5] }}>

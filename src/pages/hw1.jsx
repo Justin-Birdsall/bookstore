@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import { Sketch} from 'react-p5'
 import Bg from "./Sketch"
 import { Link } from "react-router-dom";
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 const straightenMatrix = new THREE.Matrix4().makeRotationAxis(new THREE.Vector3(1, 0, -1).normalize(), Math.atan(Math.sqrt(2)))
 const straighten = new THREE.Euler().setFromRotationMatrix(straightenMatrix)
@@ -12,7 +14,7 @@ function SierpinskiTetrahedron({ i = 0, ...props }) {
   if (i === 0) {
     return (
       <Tetrahedron {...props}>
-        <meshStandardMaterial color="blue" />
+        <meshStandardMaterial  color="blue" />
       </Tetrahedron>
     )
   } else {
@@ -31,10 +33,27 @@ function SierpinskiTetrahedron({ i = 0, ...props }) {
 
 export default function App() {
   return (
-    <Layout>
+    <>
+    <Navbar>
+    <div className="text-sm breadcrumbs">
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/book-details">Sierpinski Gasket</Link>
+          </li>
+          <li>
+            <a>3D Model</a>
+            </li>
+
+        </ul>
+      </div>
+    </Navbar>
+  <main>
  <div className="flex justify-center items-center h-screen">
     <div>
-      <Bg/>
+      {/*<Bg/>*/}
     </div>
 
     <Canvas orthographic camera={{ zoom: 300, position: [5, 5, 5] }}>
@@ -44,7 +63,9 @@ export default function App() {
     </Canvas>
     
     </div>
+</main>  
+<Footer>
 
-    </Layout>
-    
-  )}
+</Footer>
+</>
+)}
