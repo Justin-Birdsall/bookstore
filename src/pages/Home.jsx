@@ -23,7 +23,11 @@ export default function Home() {
       image: rats,
       title: "Serpinski Gasket",
       category: "WebGL",
-      price: "place holder \"price\" ",
+    },
+    {id: 1,
+      image:rats,
+      title: "place holder",
+      category: ""
     },
   ];
   const [selectedTab, setSelectedTab] = useState(null);
@@ -37,14 +41,14 @@ export default function Home() {
     <Navbar>
           <a className="btn btn-ghost text-xl">Justin Birdsall's Webpage!</a>
     </Navbar>
-    <main>
+    <main className="bg-base-200">
 <div className="hero py-32 bg-base-100">
         <div className="hero-content grid md:grid-cols-2 gap-36">
           <div>
-            <h1 className="text-5xl font-bold leading-normal text-white">
+            <h1 className="text-5xl font-bold leading-normal bg-base-100">
               Welcome to my webpage!
             </h1>
-            <p className="text-lg font-medium py-6 text-gray-300">
+            <p className="text-lg font-medium py-6p">
               My name is Justin Birdsall and I am a currently a Senior at Grand Valley State University.
             </p>
             <button className="btn btn-primary mt-4">Explore Some of my works</button>
@@ -66,15 +70,18 @@ export default function Home() {
         </div>
         </div>
         </div>
-        <div role="tablist" className="tabs tabs-lifted">
+        <div role="tablist" className="tabs tabs-lifted bg-base-300 rounded">
         <input type="radio" name="my_tabs_1" role="tab" id = "webgl-tab" className="tab [--tab-bg:accent] [--tab-border-color:accent] text-secondary" aria-label="WebGL" onChange={() => handleCategoryChange("WebGL")}
           checked={selectedTab === "WebGL"} />
-        <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:secondary] [--tab-border-color:secondary] text-primary" aria-label="Three.JS" />
-        <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="Blender" />
-        <input type="radio" name="my_tabs_1" role="tab" className="tab [--tab-bg:orange] [--tab-border-color:orange] text-primary" aria-label="WebGPU" />
+        <input type="radio" name="my_tabs_1" role="tab" id = "webgl-tab" className="tab [--tab-bg:error] [--tab-border-color:error] text-error" aria-label="Three.JS" onChange={() => handleCategoryChange("WebGL")}
+          checked={selectedTab === "WebGL"} />
+        <input type="radio" name="my_tabs_1" role="tab" id = "webgl-tab" className="tab [--tab-bg:primary] [--tab-border-color:primary] text-primary" aria-label="Blender" onChange={() => handleCategoryChange("WebGL")}
+          checked={selectedTab === "WebGL"} />
+        <input type="radio" name="my_tabs_1" role="tab" id = "webgl-tab" className="tab [--tab-bg:info] [--tab-border-color:info] text-info" aria-label="WebGPU" onChange={() => handleCategoryChange("WebGL")}
+          checked={selectedTab === "WebGL"} />
 </div>
-      <div className="py-20 max-w-7xl mx-auto ">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+      <div className="py-20 max-w-7xl mx-auto bg-base-200" >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 bg-base-200">
           {library
             .filter((example) => !selectedTab || example.category === selectedTab)
             .map((example) => (
