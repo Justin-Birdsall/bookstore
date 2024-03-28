@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import mexico from "../assets/mexico.jpeg";
 import robot from "../assets/robot.jpeg";
 import film from "../assets/filmphoto.jpeg";
@@ -18,6 +18,10 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import gasket from "../assets/rat_to_gasket.png"
 export default function Home() {
+  const works = useRef(null);
+  const handleClick = (ref) => {
+  ref.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'end' });
+};
   const library = [
     { id: 6,
       image: gasket,
@@ -51,7 +55,7 @@ export default function Home() {
             <p className="text-lg font-medium py-6p">
               My name is Justin Birdsall and I am a currently a Senior at Grand Valley State University.
             </p>
-            <button className="btn btn-primary mt-4">Explore Some of my works</button>
+            <button onClick={() => handleClick(works)} className="btn btn-primary mt-4">Explore Some of my works</button>
         </div>
           <div className="carousel carousel-center max-w-md p-3 space-x-3 bg-neutral rounded-box">
           <div className="carousel-item"> <img src={mexico} className="rounded-box" style={{ width: '300px', height: '400px' }} /> </div>
@@ -72,7 +76,7 @@ export default function Home() {
         </div>
           </main>
 
-        <div role="tablist" className="tabs tabs-lifted bg-neutral rounded">
+        <div role="tablist" ref={works} className="tabs tabs-lifted bg-neutral rounded">
         <input type="radio" name="my_tabs_1" role="tab" id = "webgl-tab" className="tab [--tab-bg:accent] [--tab-border-color:accent] text-secondary" aria-label="WebGL" onChange={() => handleCategoryChange("WebGL")}
           checked={selectedTab === "WebGL"} />
         <input type="radio" name="my_tabs_1" role="tab" id = "three-tab" className="tab [--tab-bg:error] [--tab-border-color:error] text-error" aria-label="Three.JS" onChange={() => handleCategoryChange("Three.js")}
