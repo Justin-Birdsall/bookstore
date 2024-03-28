@@ -16,11 +16,11 @@ import boston from "../assets/boston.jpeg"
 import babyphoto from "../assets/watering_grass.jpeg"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
+import gasket from "../assets/rat_to_gasket.png"
 export default function Home() {
   const library = [
     { id: 6,
-      image: rats,
+      image: gasket,
       title: "Serpinski Gasket",
       category: "WebGL",
     },
