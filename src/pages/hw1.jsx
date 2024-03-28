@@ -1,16 +1,18 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Tetrahedron } from '@react-three/drei'
 import * as THREE from 'three'
-import Layout from '../components/Layout'
 import { Sketch} from 'react-p5'
 import Bg from "./Sketch"
 import { Link } from "react-router-dom";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-
+import { useEffect } from 'react'
 const straightenMatrix = new THREE.Matrix4().makeRotationAxis(new THREE.Vector3(1, 0, -1).normalize(), Math.atan(Math.sqrt(2)))
 const straighten = new THREE.Euler().setFromRotationMatrix(straightenMatrix)
 function SierpinskiTetrahedron({ i = 0, ...props }) {
+  useEffect(() => {
+  window.scrollTo(0,0);
+}, )
   if (i === 0) {
     return (
       <Tetrahedron {...props}>

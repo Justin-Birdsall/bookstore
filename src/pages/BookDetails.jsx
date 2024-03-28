@@ -73,11 +73,11 @@ return (<>
         <div className="card-title justify-center rounded-md bg-base-300"><h1>Sierpinski Gasket</h1></div>
         <div className="card-body rounded-md bg-base-100">
           <h2><div className="badge bg-secondary badge-ghost badge-sm">WebGL</div><div className="badge badge-outline badge-accent badge-sm">Homework</div></h2>
-          <p>One of the basics of Graphics is drawing ra triangle, once you can draw a triangle you can draw anything or create 3D objects. Serpinskis 
-          Triangle asks what if you took a triangle find the midpoints and take out the middle making one triangle 3 triangles. Think of the Tri Force from the Zelda Games.
+          <p>One of the basics of Graphics is drawing a triangle, once you can draw a with code you can draw just about anything or even create 3D objects. Serpinskis 
+          Triangle asks what if you took a triangle find the midpoints and take out the middle making one triangle turn into 3 triangles. Think of the Tri Force from the Zelda Games.
           </p>
           <div className="grid flex-grow place-items-center space-y-5"><img src={triforce}  alt="Shoes" class="grid size-32 grid-cols-1 place-content-center" /> </div>
-          <p className="mb-4">Serpinkis recursive function asks what if we kept taking out a triangle from one the 3 that we have now. You can view, play with the examples,or download and modify the code to learn more.</p>
+          <p className="mb-4"> You can view, play with the examples,or download and modify the code to learn more.</p>
           <Link to="/homework1" className="btn btn-primary" >View 3D Modle</Link>
           <div className="card-actions justify-end flex-grow space-y-1"> </div>
       </div>
