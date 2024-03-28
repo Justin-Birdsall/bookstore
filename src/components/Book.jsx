@@ -15,7 +15,7 @@ const library = ({ image, title, author, category, subtitle }) => {
         <p>{author}</p>
         <p className="text-lg font-medium">{subtitle}</p>
         <div className="card-actions">
-          <Link to="/book-details" className="btn btn-primary" data-theme= "nord">
+          <Link to="/book-details" className="btn btn-primary" >
             Learn More
           </Link>
         </div>
@@ -23,5 +23,4 @@ const library = ({ image, title, author, category, subtitle }) => {
     </div>
   );
 };
-
 export default library;

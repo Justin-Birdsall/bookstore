@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import triforce from "../assets/triforce.png";
 import Navbar from './../components/Navbar';
 import Footer from './../components/Footer';
-
+import one from "../assets/screenshotshw1/1.png"
+import two from "../assets/screenshotshw1/2.png"
+import three from "../assets/screenshotshw1/3.png"
+import four from "../assets/screenshotshw1/4.png"
 const BookDetails = () => {
 useEffect(() => {
   window.scrollTo(0,0);
@@ -34,24 +37,23 @@ return (<>
   <div className="max-w-7xl mx-auto px-4">
   <div className="flex flex-col w-full lg:flex-row">
   <div className="grid flex-shrink-0 place-items-center">
-  <div alt = "image carousel for left"className="carousel max-w-[375px] h-[475px]">
+  <div alt = "image carousel for left"className="carousel max-w-[475px] h-[475px]">
   <div className="carousel w-full rounded-box">
   <div id="slide1" ref={slide1Ref} className="carousel-item relative w-full">
-    <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
+    <img src={one} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
     </div>
   </div> 
-  <div id="slide2"ref={slide2Ref} className="carousel-item relative w-full">
-    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="w-full" />
+  <div id="slide2" ref={slide2Ref} className="carousel-item relative w-full">
+    <img src={two} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-
     </div>
   </div> 
   <div id="slide3"ref={slide3Ref} className="carousel-item relative w-full">
-    <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="w-full" />
+    <img src={three} className="w-full" />
   </div> 
   <div id="slide4"ref={slide4Ref} className="carousel-item relative w-full">
-    <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="w-full" />
+    <img src={four} className="w-full" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
     </div>
   </div>
