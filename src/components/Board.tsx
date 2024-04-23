@@ -1,4 +1,5 @@
-import "./../App.css";
+
+import React, { useState } from "react";
 type BoardProps = {
 
 	board: Array<Array<string | null>>;

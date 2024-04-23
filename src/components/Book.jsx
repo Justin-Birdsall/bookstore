@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const library = ({ image, title, author, category, subtitle }) => {
+  let bookDetailLink = "";
+  if (author === "book-details") {
+    bookDetailLink = "/book-details";
+  } else if (author === "Game") {
+    bookDetailLink = "/Game";
+  }
   return (
     <div className="card  shadow-xl  bg-neutral">
       <figure className="px-10 pt-10">
@@ -15,7 +21,7 @@ const library = ({ image, title, author, category, subtitle }) => {
         <p>{author}</p>
         <p className="text-lg font-medium">{subtitle}</p>
         <div className="card-actions">
-          <Link to="/book-details" className="btn btn-primary" >
+          <Link to={bookDetailLink}className="btn btn-primary" >
             Learn More
           </Link>
         </div>

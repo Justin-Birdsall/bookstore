@@ -16,6 +16,7 @@ import boston from "../assets/boston.jpeg"
 import babyphoto from "../assets/watering_grass.jpeg"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+
 import gasket from "../assets/rat_to_gasket.png"
 export default function Home() {
   const works = useRef(null);
@@ -26,13 +27,21 @@ export default function Home() {
     { id: 6,
       image: gasket,
       title: "Serpinski Gasket",
+      author: "book-details",
       category: "WebGL",
     },
     {id: 1,
       image:rats,
-      title: "place holder",
+      title: "Rat Game",
       category: "Three.js"
     },
+      {
+    id: 2,
+      image:rats,
+      title: "Tic-Tac-Toe",
+      author:"Game",
+      category: "Three.js"
+    }
   ];
   const [selectedTab, setSelectedTab] = useState(null);
 
@@ -96,6 +105,7 @@ export default function Home() {
               key={example.id}
               image={example.image}
               title={example.title}
+              author={example.author}
               category={example.category}
               price={example.subtile}
               />
