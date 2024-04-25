@@ -42,6 +42,13 @@ export default function Home() {
       title: "Tic-Tac-Toe",
       author:"Game",
       category: "Three.js"
+    },
+    {
+      id: 3,
+      image:ttoicon,
+      title: "DND Mini",
+      author:"dnd",
+      category: "Three.js"
     }
   ];
   const [selectedTab, setSelectedTab] = useState(null);

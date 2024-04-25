@@ -10,7 +10,7 @@
       "forceConsistentCasingInFileNames": true,
       "noEmit": true
     },
-    "include": ["src/**/*.jsx", "src/pages/dndmini.tsx"],
+    "include": ["src/**/*.jsx", "src/pages/dndmini.jsx"],
     "exclude": ["node_modules"]
   }
   
