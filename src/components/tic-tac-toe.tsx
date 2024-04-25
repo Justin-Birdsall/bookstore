@@ -3,7 +3,7 @@ import { Board } from "./Board.tsx";
 
 
 type BoardArray = Array<Array<string | null>>;
-
+//
 const makeComputerMove = (board: BoardArray): [number, number] => {
 	const emptyCells: [number, number][] = [];
 	board.forEach((row, rowIndex) => {
@@ -100,11 +100,14 @@ export const TicTacToe = () => {
 	};
 
 	return (
+		
+		<div className='card'>
 		<div className='game'>
+			{winner && <p>{winner === "X" ? "You Win" : "AI Wins"}</p>}
+		</div>
+			{isNoWinner && <p> No one wins</p>}
 			<h1> Tic-Tac-Toe</h1>
 			<Board board={board}  handleClick={handleOnClick} />
-			{winner && <p>{winner === "X" ? "You Win" : "AI Wins"}</p>}
-			{isNoWinner && <p> No one wins</p>}
 			<button className='btn' type='button' onClick={() => restartGame()}>
 				Start new Game
 			</button>

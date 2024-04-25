@@ -18,6 +18,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import ttoicon from "../assets/tictactoeicon.png"
 import gasket from "../assets/rat_to_gasket.png"
+import ratsprite from  "../assets/648556256.png"
 export default function Home() {
   const works = useRef(null);
   const handleClick = (ref) => {
@@ -31,7 +32,7 @@ export default function Home() {
       category: "WebGL",
     },
     {id: 1,
-      image:rats,
+      image:ratsprite,
       author: "rat",
       title: "Rat Game",
       category: "Three.js"

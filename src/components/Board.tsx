@@ -8,7 +8,8 @@ type BoardProps = {
   
   export const Board = ({ board, handleClick }: BoardProps) => {
 	return (
-	<div className="card">
+		
+	<div className="main">
 	  <div className='board bg-primary'>
 		{board.map((row, rowIndex) => (
 		  <div key={rowIndex} className='board_row'>

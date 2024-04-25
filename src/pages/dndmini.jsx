@@ -1,7 +1,7 @@
 import React, { Suspense } from "react"
 import { Canvas } from '@react-three/fiber';
 import { Environment, useGLTF } from "@react-three/drei"
-import "../assets/Master_swordsman"
+import "../assets/Master_swordsman.glb"
 function Shoe() {
   const { scene } = useGLTF("Master_swordsaman.glb")
   return <primitive object={scene} />
