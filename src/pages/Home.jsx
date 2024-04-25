@@ -16,7 +16,7 @@ import boston from "../assets/boston.jpeg"
 import babyphoto from "../assets/watering_grass.jpeg"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-
+import ttoicon from "../assets/tictactoeicon.png"
 import gasket from "../assets/rat_to_gasket.png"
 export default function Home() {
   const works = useRef(null);
@@ -32,12 +32,13 @@ export default function Home() {
     },
     {id: 1,
       image:rats,
+      author: "rat",
       title: "Rat Game",
       category: "Three.js"
     },
       {
     id: 2,
-      image:rats,
+      image:ttoicon,
       title: "Tic-Tac-Toe",
       author:"Game",
       category: "Three.js"

@@ -8,6 +8,9 @@ const library = ({ image, title, author, category, subtitle }) => {
   } else if (author === "Game") {
     bookDetailLink = "/Game";
   }
+    else if (author === "rat") {
+    bookDetailLink = "/ratgame";
+  }
   return (
     <div className="card  shadow-xl  bg-neutral">
       <figure className="px-10 pt-10">
@@ -18,7 +21,7 @@ const library = ({ image, title, author, category, subtitle }) => {
           {title}{" "}
           <div className="badge badge-secondary text-xs"data-theme = "dim">{category}</div>
         </h2>
-        <p>{author}</p>
+    
         <p className="text-lg font-medium">{subtitle}</p>
         <div className="card-actions">
           <Link to={bookDetailLink}className="btn btn-primary" >

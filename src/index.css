@@ -21,3 +21,7 @@ body {
   left: 0;
   bottom: 0;
 }
+.cell{
+  width:100px;
+  height: 200px;
+}

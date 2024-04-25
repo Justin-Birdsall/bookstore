@@ -6,7 +6,7 @@ import gasket from "./pages/gasket"
 import GasketPoints from "./pages/gasket";
 import Bg from "./pages/Sketch"
 import Game from "./pages/Game";
-
+import EmbeddedIframe from "./pages/ratgame";
 function App() {
   return (
     <Routes>
@@ -16,6 +16,7 @@ function App() {
       <Route path="/gasket"element={<GasketPoints/>} />
       <Route path="/Bg" element={<Bg/>}/>
        <Route path="/Game" element={<Game/>}/>
+       <Route path="/ratgame"element = {<EmbeddedIframe/>}/>
     </Routes>
   );
 }

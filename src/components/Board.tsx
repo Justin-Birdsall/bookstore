@@ -8,13 +8,14 @@ type BoardProps = {
   
   export const Board = ({ board, handleClick }: BoardProps) => {
 	return (
-	  <div className='board '>
+	<div className="card">
+	  <div className='board bg-primary'>
 		{board.map((row, rowIndex) => (
 		  <div key={rowIndex} className='board_row'>
 			{row.map((cell, cellIndex) => (
 			  <button 
 				key={cellIndex}
-				className={`cell ${cell ? `cell_${cell.toLowerCase()}` : ""} `}
+				className={`btn ${cell ? `bg_${cell.toLowerCase()}-primary` : ""} `}
 				onClick={() => handleClick(rowIndex, cellIndex)}
 			  >
 				{cell}
@@ -22,6 +23,7 @@ type BoardProps = {
 			))}
 		  </div>
 		))}
+	  </div>
 	  </div>
 	);
   };
