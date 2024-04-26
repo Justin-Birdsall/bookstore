@@ -47,6 +47,6 @@ export default function App() {
     <div className='button rounded-lg'>
 hello
     </div>
-    </Layout>
+</>
   )
 }

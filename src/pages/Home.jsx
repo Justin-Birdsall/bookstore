@@ -34,8 +34,8 @@ export default function Home() {
     {id: 1,
       image:ratsprite,
       author: "rat",
-      title: "Rat Game",
-      category: "Three.js"
+      title: "2D Rat Game",
+      category: "Pixi.js"
     },
       {
     id: 2,
@@ -49,7 +49,7 @@ export default function Home() {
       image:ttoicon,
       title: "DND Mini",
       author:"dnd",
-      category: "Three.js"
+      category: "Blender"
     }
   ];
   const [selectedTab, setSelectedTab] = useState(null);
@@ -102,7 +102,9 @@ export default function Home() {
         <input type="radio" name="my_tabs_1" role="tab" id = "blender-tab" className="tab [--tab-bg:primary] [--tab-border-color:primary] text-primary" aria-label="Blender" onChange={() => handleCategoryChange("Blender")}
           checked={selectedTab === "blender"} />
         <input type="radio" name="my_tabs_1" role="tab" id = "gpu-tab" className="tab [--tab-bg:info] [--tab-border-color:info] text-info" aria-label="WebGPU" onChange={() => handleCategoryChange("WebGPU")}
-          checked={selectedTab === "gpu"} />
+        checked={selectedTab === "gpu"} />
+        <input type="radio" name="my_tabs_1" role="tab" id = "pixijs-tab" className="tab [--tab-bg:info] [--tab-border-color:info] text-info" aria-label="Pixi.JS" onChange={() => handleCategoryChange("Pixi.js")}
+checked={selectedTab === "Pixi.js"} />
 </div>
 <div className="content-container bg-base-200" >
       <div className="py-20 max-w-7xl mx-auto" >

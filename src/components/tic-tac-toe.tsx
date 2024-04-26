@@ -100,17 +100,20 @@ export const TicTacToe = () => {
 	};
 
 	return (
-		
-		<div className='card'>
-		<div className='game'>
-			{winner && <p>{winner === "X" ? "You Win" : "AI Wins"}</p>}
+		<div className="flex flex-grow justify-center items-center h-screen">
+			
+
+		<div className='card w-4/5'>
+		<div className='game  '>
 		</div>
-			{isNoWinner && <p> No one wins</p>}
-			<h1> Tic-Tac-Toe</h1>
+			<div className="card-title justify-center"> Tic-Tac-Toe</div>
+			{winner && <button className="btn">{winner === "X" ? "You Win" : "AI Wins"}</button>}
+			{isNoWinner && <button className="btn"> No one wins</button>}
 			<Board board={board}  handleClick={handleOnClick} />
 			<button className='btn' type='button' onClick={() => restartGame()}>
 				Start new Game
 			</button>
+		</div>
 		</div>
 	);
 };
