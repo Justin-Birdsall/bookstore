@@ -104,11 +104,11 @@ export const TicTacToe = () => {
 			
 
 		<div className='card w-4/5'>
-		<div className='game  '>
+		<div className='game '>
 		</div>
 			<div className="card-title justify-center"> Tic-Tac-Toe</div>
 			{winner && <button className="btn">{winner === "X" ? "You Win" : "AI Wins"}</button>}
-			{isNoWinner && <button className="btn"> No one wins</button>}
+			{isNoWinner && !winner && <button className="btn"> No one wins</button>}
 			<Board board={board}  handleClick={handleOnClick} />
 			<button className='btn' type='button' onClick={() => restartGame()}>
 				Start new Game

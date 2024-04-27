@@ -42,7 +42,7 @@ export default function Home() {
       image:ttoicon,
       title: "Tic-Tac-Toe",
       author:"Game",
-      category: "Three.js"
+      category: "TypeScript"
     },
     {
       id: 3,
@@ -64,7 +64,7 @@ export default function Home() {
           <a className="btn btn-ghost text-xl">Justin Birdsall's Webpage!</a>
     </Navbar>
     <main className="content-container">
-<div className="hero py-32 min-height: 100vh">
+    <div className="hero py-32 min-height: 100vh">
         <div className="hero-content grid md:grid-cols-2 gap-36 bg-base-100">
           <div>
             <h1 className="text-5xl font-bold leading-normal bg-base-100">
@@ -99,11 +99,11 @@ export default function Home() {
           checked={selectedTab === "WebGL"} />
         <input type="radio" name="my_tabs_1" role="tab" id = "three-tab" className="tab [--tab-bg:error] [--tab-border-color:error] text-error" aria-label="Three.JS" onChange={() => handleCategoryChange("Three.js")}
           checked={selectedTab === "Three.js"} />
-        <input type="radio" name="my_tabs_1" role="tab" id = "blender-tab" className="tab [--tab-bg:primary] [--tab-border-color:primary] text-primary" aria-label="Blender" onChange={() => handleCategoryChange("Blender")}
-          checked={selectedTab === "blender"} />
-        <input type="radio" name="my_tabs_1" role="tab" id = "gpu-tab" className="tab [--tab-bg:info] [--tab-border-color:info] text-info" aria-label="WebGPU" onChange={() => handleCategoryChange("WebGPU")}
-        checked={selectedTab === "gpu"} />
-        <input type="radio" name="my_tabs_1" role="tab" id = "pixijs-tab" className="tab [--tab-bg:info] [--tab-border-color:info] text-info" aria-label="Pixi.JS" onChange={() => handleCategoryChange("Pixi.js")}
+        <input type="radio" name="my_tabs_1" role="tab" id = "Blender-tab" className="tab [--tab-bg:primary] [--tab-border-color:info] text-primary" aria-label="Blender" onChange={() => handleCategoryChange("Blender")}
+          checked={selectedTab === "Blender"} />
+        <input type="radio" name="my_tabs_1" role="tab" id = "typescript-tab" className="tab [--tab-bg:info] [--tab-border-color:info] text-info" aria-label="TypeScript" onChange={() => handleCategoryChange("TypeScript")}
+        checked={selectedTab === "TypeScript"} />
+        <input type="radio" name="my_tabs_1" role="tab" id = "Pixijs-tab" className="tab [--tab-bg:info] [--tab-border-color:info] text-info" aria-label="Pixi.JS" onChange={() => handleCategoryChange("Pixi.js")}
 checked={selectedTab === "Pixi.js"} />
 </div>
 <div className="content-container bg-base-200" >

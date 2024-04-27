@@ -9,6 +9,7 @@ import Game from "./pages/Game";
 import EmbeddedIframe from "./pages/ratgame";
 import dndmini from "./pages/dndmini";
 import DNDMINI from "./pages/dndmini";
+import Viewer from "./pages/dndmini";
 function App() {
   return (
     <Routes>
@@ -19,7 +20,7 @@ function App() {
       <Route path="/Bg" element={<Bg/>}/>
        <Route path="/Game" element={<Game/>}/>
        <Route path="/ratgame"element = {<EmbeddedIframe/>}/>
-       <Route path="/dndmini"element = {<DNDMINI/>}/>
+       <Route path="/dndmini"element = {<Viewer/>}/>
     </Routes>
   );
 }

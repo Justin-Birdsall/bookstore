@@ -44,9 +44,7 @@ export default function App() {
       <ambientLight intensity={0.5} />
     </Canvas>
     </div>
-    <div className='button rounded-lg'>
-hello
-    </div>
+
 </>
   )
 }

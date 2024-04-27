@@ -10,9 +10,9 @@ type BoardProps = {
 	return (
 		
 	<div className="main ">
-	  <div className='board bg-primary flex justify-center space-x-1'>
+	  <div className='board bg-primary flex justify-center space-x-1 '>
 		{board.map((row, rowIndex) => (
-		  <div key={rowIndex} className='board_row grid row-span-3 col-span-3 gap-x-4 gap-y-1 '>
+		  <div key={rowIndex} className='board_row grid row-span-3 col-span-3 my-8 gap-y-1 '>
 			{row.map((cell, cellIndex) => (
 			  <button 
 				key={cellIndex}
