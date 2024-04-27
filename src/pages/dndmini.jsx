@@ -9,6 +9,9 @@ export default function Viewer() {
 <Navbar>
 
 </Navbar>
+ <div className="flex justify-center items-center h-screen">
+
+
 <Canvas shadows dpr={[1, 2]} camera={{ fov: 50 }}>
       <Suspense fallback={null}>
         <Stage  preset="rembrandt" intensity={1}  environment="city">
@@ -19,6 +22,7 @@ export default function Viewer() {
       </Suspense>
       <OrbitControls  autoRotate />
     </Canvas>
+     </div>
     </>
   )
 }
