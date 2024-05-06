@@ -1,4 +1,5 @@
 import React, {useState, useRef} from "react";
+
 import mexico from "../assets/mexico.jpeg";
 import robot from "../assets/robot.jpeg";
 import film from "../assets/filmphoto.jpeg";
@@ -51,6 +52,13 @@ export default function Home() {
       title: "DND Mini",
       author:"dnd",
       category: "Blender"
+    },
+        {
+      id: 4,
+      image:dndniconimage,
+      title: "p5 Example",
+      author:"p5",
+      category: "Three"
     }
   ];
   const [selectedTab, setSelectedTab] = useState(null);

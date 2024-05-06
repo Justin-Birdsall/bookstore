@@ -14,6 +14,9 @@ const library = ({ image, title, author, category, subtitle }) => {
    else if (author === "dnd") {
     bookDetailLink = "/dndmini";
   }
+   else if (author === "p5") {
+    bookDetailLink = "/P5example";
+  }
   return (
     <div className="card  shadow-xl  bg-neutral">
       <figure className="px-10 pt-10">

@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { Suspense, useRef, useState, useEffect } from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const EmbeddedIframe = () => {
+     const [isNavbarInView, setIsNavbarInView] = useState(true);
+    const observer = useRef(null);
+  
+    useEffect(() => {
+      observer.current = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsNavbarInView(false);
+          } else {
+            setIsNavbarInView(true);
+          }
+        });
+      });
+  
+      observer.current.observe(document.querySelector('.navbar'));
+  
+      return () => {
+        if (observer.current) {
+          observer.current.disconnect();
+        }
+      };
+    }, []);
+
+    useEffect(() => {
+        if (isNavbarInView) {
+            document.querySelector('.navbar').scrollIntoView();
+        }
+    }, [isNavbarInView]);
   return (
     <>
     <Navbar>
