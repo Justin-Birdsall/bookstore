@@ -19,6 +19,7 @@ import Navbar from "../components/Navbar";
 import ttoicon from "../assets/tictactoeicon.png"
 import gasket from "../assets/rat_to_gasket.png"
 import ratsprite from  "../assets/648556256.png"
+import dndniconimage from "../assets/dndmini.png"
 export default function Home() {
   const works = useRef(null);
   const handleClick = (ref) => {
@@ -46,7 +47,7 @@ export default function Home() {
     },
     {
       id: 3,
-      image:ttoicon,
+      image:dndniconimage,
       title: "DND Mini",
       author:"dnd",
       category: "Blender"

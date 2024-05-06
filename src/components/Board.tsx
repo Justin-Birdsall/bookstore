@@ -6,7 +6,8 @@ type BoardProps = {
 	handleClick: (row: number, col: number) => void;
   };
   
-  export const Board = ({ board, handleClick }: BoardProps) => {
+  export const Board: React.FC<BoardProps> = ({ board, handleClick }) => {
+
 	return (
 		
 	<div className="main ">

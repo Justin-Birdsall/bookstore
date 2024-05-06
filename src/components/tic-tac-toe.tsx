@@ -107,6 +107,7 @@ export const TicTacToe = () => {
 		<div className='game '>
 		</div>
 			<div className="card-title justify-center"> Tic-Tac-Toe</div>
+			{/* trigger tigger the right you win screen for  */}
 			{winner && <button className="btn">{winner === "X" ? "You Win" : "AI Wins"}</button>}
 			{isNoWinner && !winner && <button className="btn"> No one wins</button>}
 			<Board board={board}  handleClick={handleOnClick} />
